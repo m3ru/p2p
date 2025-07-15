@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
 });
 
 const gun = Gun({ web: server });
-
+const messages = gun.get('messages');
 server.listen(port, () => {
   console.log(`GUN server running at http://localhost:${port}/`);
 });
