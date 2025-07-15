@@ -2,9 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Gun from 'gun';
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const gun = Gun(['http://localhost:3000/gun']); // Use your server's address and port
+
+  // Now you can use `gun` for your chat logic
 
   return (
     <>
